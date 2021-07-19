@@ -63,7 +63,7 @@ This is a 3-stage Pipeline that queries some SQL data in stage 1, does some cust
 transformation in stage 2, and then writes the resulting data to a SQL table in stage 3.
 The code to create and run this basic Pipeline would look something like:
 
-        // First initalize the DataProcessors
+        // First initialize the DataProcessors
         read := processors.NewSQLReader(db1, "SELECT * FROM source_table")
         transform := NewCustomTransformer() // (This would your own custom DataProcessor implementation)
         write := processors.NewSQLWriter(db2, "destination_table")
